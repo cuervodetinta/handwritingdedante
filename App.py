@@ -25,7 +25,7 @@ st.markdown("<style>body { background-color: #E0D585; margin: 0; padding: 0; }</
 st.markdown("<h1 style='text-align: center;'>Reconocimiento de Dígitos escritos a mano</h1>", unsafe_allow_html=True)
 
 # Mostrar la imagen debajo del título
-st.image("DIBUJITO.png", use_column_width=True)
+st.image("DIBUJITO.png", use_container_width=True)
 
 st.markdown("<h3 style='text-align: center;'>Dibuja el digito en el panel y presiona 'Predecir'</h3>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center;'>En esta aplicación se evalua la capacidad de un RNA de reconocer dígitos escritos a mano. Basado en desarrollo de Vinay Uniyal.</p>", unsafe_allow_html=True)
