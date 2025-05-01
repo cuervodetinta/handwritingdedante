@@ -5,7 +5,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
 from streamlit_drawable_canvas import st_canvas
-from PIL import Image
 
 def predictDigit(image):
     model = tf.keras.models.load_model("model/handwritten.h5")
@@ -21,13 +20,15 @@ def predictDigit(image):
     return result
 
 st.set_page_config(page_title='Reconocimiento de Dígitos escritos a mano', layout='wide')
-st.markdown("<style>body { background-color: #E0D585; }</style>", unsafe_allow_html=True)
+st.markdown("<style>body { background-color: #E0D585; margin: 0; padding: 0; }</style>", unsafe_allow_html=True)
 
 st.markdown("<h1 style='text-align: center;'>Reconocimiento de Dígitos escritos a mano</h1>", unsafe_allow_html=True)
+
+# Mostrar la imagen debajo del título
+st.image("DIBUJITO.png", use_column_width=True)
+
 st.markdown("<h3 style='text-align: center;'>Dibuja el digito en el panel y presiona 'Predecir'</h3>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center;'>En esta aplicación se evalua la capacidad de un RNA de reconocer dígitos escritos a mano. Basado en desarrollo de Vinay Uniyal.</p>", unsafe_allow_html=True)
-
-image = Image.open('DIBUJITO.png')
 
 drawing_mode = "freedraw"
 stroke_width = st.slider('Selecciona el ancho de línea', 1, 30, 15)
