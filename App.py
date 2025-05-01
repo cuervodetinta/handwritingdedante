@@ -20,7 +20,7 @@ def predictDigit(image):
     return result
 
 st.set_page_config(page_title='Reconocimiento de Dígitos escritos a mano', layout='wide')
-st.markdown("<style>body { background-color: #E0D585; }</style>", unsafe_allow_html=True)
+st.markdown("<style>body { background-color: #E0D585; margin: 0; padding: 0; }</style>", unsafe_allow_html=True)
 
 st.markdown("<h1 style='text-align: center;'>Reconocimiento de Dígitos escritos a mano</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center;'>Dibuja el digito en el panel y presiona 'Predecir'</h3>", unsafe_allow_html=True)
@@ -39,8 +39,8 @@ with col1:
         stroke_width=stroke_width,
         stroke_color=stroke_color,
         background_color=bg_color,
-        height=200,
-        width=200,
+        height=400,
+        width=400,
         key="canvas",
     )
 
